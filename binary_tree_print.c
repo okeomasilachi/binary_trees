@@ -90,7 +90,8 @@ void binary_tree_print(const binary_tree_t *tree)
 			s[i][j] = '\0';
 		}
 		printf("%s\n", s[i]);
-		free(s[i]);
+		//free(s[i]);
 	}
-	free(s);
+	//free(s);
 }
+
