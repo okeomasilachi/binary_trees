@@ -1,7 +1,5 @@
 #include "binary_trees.h"
 
-#include "binary_trees.h"
-
 /**
  * binary_tree_postorder - The function performs a postorder traversal
  *		on a binary tree and applies a given function to each node.
