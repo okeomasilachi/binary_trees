@@ -15,23 +15,23 @@
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second)
 {
-	binary_tree_t *current_first = NULL, *current_second = NULL;
+	binary_tree_t *current_f = NULL, *current_s = NULL;
 
 	if (!first || !second)
 		return (NULL);
 
-	current_first = (binary_tree_t *)first;
-	while (current_first)
+	current_f = (binary_tree_t *)first;
+	while (current_f)
 	{
-		current_second = (binary_tree_t *)second;
-		while (current_second)
+		current_s = (binary_tree_t *)second;
+		while (current_s)
 		{
-			if (current_first == current_second)
-				return (current_first);
+			if (current_f == current_s)
+				return (current_f);
 
-			current_second = current_second->parent;
+			current_s = current_s->parent;
 		}
-		current_first = current_first->parent;
+		current_f = current_f->parent;
 	}
 
 	return (NULL);
