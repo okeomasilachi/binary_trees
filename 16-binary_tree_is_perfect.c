@@ -80,7 +80,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	size_t h = 0, n = 0, ran = 0;
 
 	if (tree == NULL)
-		return(0);
+		return (0);
+
+	if (tree->left == NULL && tree->right == NULL)
+		return (1);
 
 	n = nodes(tree);
 	h = tree_h(tree) - 1;
