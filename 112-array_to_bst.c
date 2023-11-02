@@ -12,7 +12,9 @@
  */
 bst_t *array_to_bst(int *array, size_t size)
 {
-	bst_t *tree;
+	bst_t *tree = NULL;
+
+	(void)array, (void)size, (void)tree;
 
 	return (tree);
 }

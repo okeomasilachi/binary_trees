@@ -12,7 +12,9 @@
  */
 heap_t *array_to_heap(int *array, size_t size)
 {
-	heap_t *tree;
+	heap_t *tree = NULL;
+
+	(void)array, (void)size, (void)tree;
 
 	return (tree);
 }

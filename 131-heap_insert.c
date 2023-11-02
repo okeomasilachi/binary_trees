@@ -14,5 +14,7 @@ heap_t *heap_insert(heap_t **tree, int value)
 {
 	heap_t *heap = NULL;
 
+	(void)tree, (void)value;
+
 	return (heap);
 }

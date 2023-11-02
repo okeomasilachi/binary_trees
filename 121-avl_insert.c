@@ -14,5 +14,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 {
 	avl_t *avl = NULL;
 
+	(void)tree, (void)value;
+
 	return (avl);
 }

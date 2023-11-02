@@ -14,5 +14,7 @@ bst_t *bst_remove(bst_t *root, int value)
 {
 	bst_t *bst = NULL;
 
+	(void)root, (void)value;
+
 	return (bst);
 }

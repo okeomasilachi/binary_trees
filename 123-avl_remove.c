@@ -14,5 +14,7 @@ avl_t *avl_remove(avl_t *root, int value)
 {
 	avl_t *avl = NULL;
 
+	(void)root, (void)value;
+
 	return (avl);
 }

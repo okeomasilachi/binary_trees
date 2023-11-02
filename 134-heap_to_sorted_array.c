@@ -13,5 +13,7 @@ int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {
 	int *arr = NULL;
 
+	(void)heap, (void)size;
+
 	return (arr);
 }
