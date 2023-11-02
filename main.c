@@ -7,25 +7,28 @@
  */
 int main(void)
 {
-    binary_tree_t *root;
-    int bst;
+    bst_t *root;
+    bst_t *node;
 
-    root = binary_tree_node(NULL, 98);
-    root->left = binary_tree_node(root, 12);
-    root->right = binary_tree_node(root, 128);
-    root->left->right = binary_tree_node(root->left, 54);
-    root->right->right = binary_tree_node(root, 402);
-    root->left->left = binary_tree_node(root->left, 10);
-
+    root = NULL;
+    node = bst_insert(&root, 98);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 402);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 12);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 46);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 128);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 256);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 512);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 1);
+    printf("Inserted: %d\n", node->n);
+    node = bst_insert(&root, 128);
+    printf("Node should be nil -> %p\n", (void *)node);
     binary_tree_print(root);
-    bst = binary_tree_is_bst(root);
-    printf("Is %d bst: %d\n", root->n, bst);
-    bst = binary_tree_is_bst(root->left);
-    printf("Is %d bst: %d\n", root->left->n, bst);
-
-    root->right->left = binary_tree_node(root->right, 97);
-    binary_tree_print(root);
-    bst = binary_tree_is_bst(root);
-    printf("Is %d bst: %d\n", root->n, bst);
     return (0);
 }
